@@ -77,5 +77,18 @@ Contoh penamaan branch yang baik :
 
 Dengan ketentuan penamaan branch yang jelas, kita dapat memastikan bahwa setiap branch memiliki tujuan dan fungsi yang jelas, sehingga mempermudah proses pengelolaan dan review.
 
+## Penggunaan Branch `main` dan `dev`
+Project ini menggunakan dua branch utama, yaitu `main` dan `dev`.
+
+### Branch `main`
+Branch `main` adalah branch produksi, yang berisi kode yang sudah teruji dan siap digunakan. Hanya perubahan yang sudah disetujui melalui pull request dan diverifikasi oleh maintainer yang akan diterima ke branch ini.
+
+### Branch `dev`
+Branch `dev` adalah branch pengembangan, tempat dimana semua kontributor dapat mengerjakan perubahan dan fitur baru. Setelah selesai, perubahan dapat diterima ke branch `main` melalui pull request dan proses review.
+
+Sebelum memulai pengembangan, pastikan untuk membuat branch baru dari branch `dev` dengan nama yang sesuai dan deskriptif. Setelah selesai, buatlah pull request ke branch `dev` untuk meminta review dan di-merge ke branch `main` jika sudah disetujui.
+
+Dengan mengikuti ketentuan penggunaan branch ini, kita dapat memastikan bahwa branch `main` selalu stabil dan siap digunakan, serta mempermudah proses pengembangan dan penerimaan perubahan.
+
 Terima kasih atas kontribusi anda!
 

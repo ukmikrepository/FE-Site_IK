@@ -31,6 +31,9 @@ module.exports = {
         "grey-10": "#EBEBEB",
       },
     },
+    transitionProperty: {
+      'size': 'width, height'
+    },
     container: {
       padding: {
         DEFAULT: "1.25rem",

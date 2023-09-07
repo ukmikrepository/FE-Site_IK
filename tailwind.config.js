@@ -13,11 +13,12 @@ module.exports = {
       padding: {
         DEFAULT: "1.25rem",
         sm: "0.75rem",
-        lg: "3rem",
-        xl: "3rem",
-        "2xl": "3rem",
+        lg: "5rem",
+        xl: "4rem",
+        "2xl": "1rem",
       },
     },
+
   },
   plugins: [],
 }

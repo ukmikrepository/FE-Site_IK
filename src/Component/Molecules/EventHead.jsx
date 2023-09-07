@@ -2,7 +2,7 @@ import React from "react";
 
 export default function EventHead() {
   return (
-    <div className="flex justify-between">
+    <div className="flex justify-between container mx-auto">
       <div>
         <h1 className="font-extrabold text-6xl text-primary-1 drop-shadow-[0_4px_4px_rgba(85,183,255,1)]">
           POPULAR <br /> EVENT

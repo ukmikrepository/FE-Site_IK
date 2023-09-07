@@ -3,7 +3,7 @@ import React from 'react';
 // import Footer from './Component/Organism/Nav/Footer'
 import Standard from './Component/Layout/Standard';
 import Hero from './Component/Organism/Content/Hero';
-// import Event from './Component/Organism/Content/Event';
+import Event from './Component/Organism/Content/Event';
 // import WorkProgram from './Component/Organism/Content/WorkProgram';
 // import Experience from './Component/Organism/Content/Experience';
 // import Contact from './Component/Organism/Content/Contact';
@@ -11,10 +11,10 @@ import Hero from './Component/Organism/Content/Hero';
 function App({user}) {
   return (
     <>
-    <Standard className='bg-slate-500'>
+    <Standard>
       <Hero/>
-      {/* <Event/>
-      <WorkProgram/>
+      <Event/>
+      {/* <WorkProgram/>
       <Experience/>
       <Contact/> */}
     </Standard>

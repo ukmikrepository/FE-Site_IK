@@ -1,7 +1,10 @@
 import React from 'react'
+import CaptionEventCard from '../Atoms/CaptionEventCard'
 
 export default function EventCard() {
   return (
-    <div>EventCard</div>
+    <div>
+      <CaptionEventCard />
+    </div>
   )
 }

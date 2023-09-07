@@ -6,7 +6,7 @@ module.exports = {
     extend: {
       fontFamily: {
         'poppins': ['Poppins', 'sans-serif'],
-        'montserrat': ['Montserrat', 'sans-serif'],
+        'mont': ['Montserrat', 'sans-serif'],
       },
     },
     container: {

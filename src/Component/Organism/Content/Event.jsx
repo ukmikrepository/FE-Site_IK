@@ -6,9 +6,7 @@ import EventHead from "../../Molecules/EventHead";
 export default function Event() {
   return (
     <div className="mt-24">
-      <div className="container">
         <EventHead />
-      </div>
       <Marquee direction="right" pauseOnHover="true">
         <div className="flex relative flex-nowrap flex-grow-0 overflow-auto gap-4 mt-8 mr-4">
           <EventCard

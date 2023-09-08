@@ -21,7 +21,7 @@ export default function Navbar() {
   }, []);
 
   return (
-    <div className={`container flex justify-between items-center z-40 w-screen fixed top-0 text-white py-4 ${scrolled ? 'backdrop-blur-md bg-[rgba(0,0,0,0.25)]' : 'bg-transparent'}`}>
+    <div className={`container flex justify-between items-center z-40 w-screen fixed top-0 text-white py-4 ${scrolled ? 'backdrop-blur-sm bg-[rgba(0,0,0,0.10)]' : 'bg-transparent'}`}>
       <img src="img/logo_ukmik.png" alt="" className='w-[50px] h-[50px]' />
         <ul className={`flex gap-8 items-center`}>
           <li>Home</li>

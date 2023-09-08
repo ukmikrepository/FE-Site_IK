@@ -12,7 +12,7 @@ export default function CaptionEventCard({ title, date }) {
           alert("click");
         }}
       >
-        View
+        <span className="drop-shadow-[0_4px_4px_rgba(0,0,0,0.25)]">View</span>
       </Button>
     </div>
   );

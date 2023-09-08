@@ -14,9 +14,35 @@ export default function WorkProgram() {
           </div>
         </div>
 
-        <div>
-          <CardSimple>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minus accusamus nobis officia rerum. Perferendis esse quo officia explicabo dolore perspiciatis, recusandae eum neque, maiores, ipsum impedit! Eum, omnis excepturi! Sequi.
+        <div className="container">
+          <CardSimple className=" gap-4">
+            <div className="flex flex-col gap-3 bororange-600 ">
+              <div className="flex flex-row justify-between borr-red-800">
+                <div className="flex flex-row gap-4">
+                    <div className="w-14 rounded-full bg-primary-4"></div>
+                    <div className="flex flex-col gap-2 ">
+                      <h2 className="font-poppins text-xl leading-[30px] text-grey-1">Latihan Kader 3</h2>
+                      <p className="font-poppins font-light text-xs leading-[18px]">Divisi Keanggotaan</p>
+                    </div>
+                </div>
+                <img src="img/Options_1.png" alt="" className="h-max pt-[1px]"/>
+              </div>
+              <span className="border border-grey-10 w-full"></span>
+            </div>
+
+
+            <div className="w-[312px]">
+              <p className="font-poppins font-light text-[10px] leading-[15px]">Latihan Kader adalah acara yang diselenggarakan sebagai salah satu syarat calon anggota agar bisa dilantik menjadi anggota</p>
+            </div>
+
+            <div className="flex flex-row justify-between mt-4">
+              <div>
+              {/* <img src="" alt="" />
+              <img src="" alt="" />
+              <img src="" alt="" /> */}
+              </div>
+              <p className="font-poppins font-semibold text-[14px] text-grey-1 leading-[21px]">Due to : <span className="font-light">22 February 2024</span></p>
+            </div>
           </CardSimple>
         </div>
       </div>

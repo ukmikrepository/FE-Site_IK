@@ -13,12 +13,12 @@ export default function Hero() {
         <div className="w-screen xs:pt-[380px] lg:pt-32 2xl:pt-56 pb-[60px]">
           <div className="container mx-auto flex flex-col lg:flex-row justify-between gap-4 lg:px-">
 
-                <div className="mr-[25px] 2xl:mr-[-100px] lg:order-2 xs:absolute xs:right-14 xs:top-5 lg:static">
-                  <img src="img/Astrounaut.png" alt="Astronout-ilustration" className="xs:w-[150px] sm:w-[150px] md:w-[250px] lg:w-[350px] 2xl:w-[550px] mt-20 2xl:mt-40 " />
+                <div className="mr-[100px] 2xl:mr-[-100px] lg:order-2 xs:absolute xs:right-14 xs:top-5 lg:static">
+                  <img src="img/Astrounaut.png" alt="Astronout-ilustration" className="xs:w-[150px] sm:w-[150px] md:w-[250px] lg:w-[325px] 2xl:w-[550px] mt-10 2xl:mt-40 " />
                 </div>
                 <div className="flex flex-col gap-6 2xl:gap-8 white">
-                  <h1 className="font-mont font-extrabold xs:text-[40px] xs:leading-[55px]  lg:text-[74px] lg:leading-[90px] text-[#C6E7FF] drop-shadow-[0_8px_8px_rgba(109,124,255,1)]">Hello <br /> Welcome to <br /> IK Space</h1>
-                  <p className="font-poppins font-semibold xs:text-[12px] xs:leading-[20px]  lg:text-[20px] lg:leading-[32px] text-[#A8BBFF]">Do You Want to Know More About Us? <br /> Let's Surf Our Website! If You Interest And <br /> Would To Be A Part Of UKMIK, Don't Wait to Click Down Bellow</p>
+                  <h1 className="font-mont font-extrabold xs:text-[40px] xs:leading-[55px]  lg:text-[60px] lg:leading-[64px] text-[#C6E7FF] drop-shadow-[0_8px_8px_rgba(109,124,255,1)]">Hello <br /> Welcome to <br /> IK Space</h1>
+                  <p className="font-poppins font-semibold xs:text-[12px] xs:leading-[16px]  lg:text-[16px] lg:leading-[24px] text-[#A8BBFF]">Do You Want to Know More About Us? <br /> Let's Surf Our Website! If You Interest And <br /> Would To Be A Part Of UKMIK, Don't Wait to Click Down Bellow</p>
                   <Button color="bg-[#5C7DFF]" anotherClass="rounded-full w-fit border border-[#A8BBFF] drop-shadow-[0_8px_5px_rgba(1,0,55,1)] text-white xs:text-[12px] xs:py-1 xs:px-2 md:text-[16px] md:py-2 md:px-4">Join Us</Button>
                 </div>
           </div>

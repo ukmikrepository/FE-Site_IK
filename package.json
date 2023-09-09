@@ -11,9 +11,9 @@
     "react-dom": "^18.2.0",
     "react-fast-marquee": "^1.6.0",
     "react-icons": "^4.11.0",
+    "react-medium-image-zoom": "^5.1.8",
     "react-random-reveal": "^2.0.0",
     "react-scripts": "5.0.1",
-    "swiper": "^10.2.0",
     "web-vitals": "^2.1.4"
   },
   "scripts": {

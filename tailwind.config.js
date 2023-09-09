@@ -6,6 +6,15 @@ module.exports = {
         poppins: ["Poppins", "sans-serif"],
         mont: ["Montserrat", "sans-serif"],
       },
+      animation: {
+        'bounce-up-down': 'bounce-up-down 2s infinite',
+      },
+      keyframes: {
+        'bounce-up-down': {
+          '0%, 100%': { transform: 'translateY(0)' },
+          '50%': { transform: 'translateY(-20px)' },
+        },
+      },
       colors: {
         "primary-1": "#1A8CE0",
         "primary-2": "#056BB7",

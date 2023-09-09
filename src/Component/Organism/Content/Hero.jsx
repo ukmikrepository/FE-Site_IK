@@ -14,7 +14,7 @@ export default function Hero() {
           <div className="container mx-auto flex flex-col lg:flex-row justify-between gap-4 lg:px-">
 
                 <div className="mr-[100px] 2xl:mr-[-100px] lg:order-2 xs:absolute xs:right-14 xs:top-5 lg:static">
-                  <img src="img/Astrounaut.png" alt="Astronout-ilustration" className="xs:w-[150px] sm:w-[150px] md:w-[250px] lg:w-[325px] 2xl:w-[550px] mt-10 2xl:mt-40 " />
+                  <img src="img/Astrounaut.png" alt="Astronout-ilustration" className=" animate-bounce-up-down xs:w-[150px] sm:w-[150px] md:w-[250px] lg:w-[325px] 2xl:w-[550px] mt-10 2xl:mt-40 " />
                 </div>
                 <div className="flex flex-col gap-6 2xl:gap-8 white">
                   <h1 className="font-mont font-extrabold xs:text-[40px] xs:leading-[55px]  lg:text-[60px] lg:leading-[64px] text-[#C6E7FF] drop-shadow-[0_8px_8px_rgba(109,124,255,1)]">Hello <br /> Welcome to <br /> IK Space</h1>

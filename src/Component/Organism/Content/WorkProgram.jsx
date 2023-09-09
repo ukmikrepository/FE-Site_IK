@@ -3,10 +3,10 @@ import { CardSimple } from '../../Molecules/CardSimple'
 
 export default function WorkProgram() {
   return (
-    <div className="w-full h-full relative">
-      <img src="img/OurProgram_BG.png" alt="" className="2xl:h-screen w-full absolute -z-50"/>
+    <div className="w-full h-full relative py-24 mt-12 mb-24" style={{ backgroundImage: "url('img/OurProgram_BG.png')" }}>
+      {/* <img src="img/OurProgram_BG.png" alt="" className="2xl:h-fit w-full absolute -z-50"/> */}
 
-      <div className="container mx-auto mt-16 2xl:mt-28">
+      <div className="container mx-auto">
         <div className="w-max mx-auto text-center">
           <h1 className="font-mont font-semibold text-primary-4 text-[52px] leading-[62px] drop-shadow-[0_2px_2px_rgba(8,4,174,1)]">Our Work <br className="xs:inline md:hidden"/> Program</h1>
           <p className="font-poppins text-[30px] leading-[45px]">February 2023</p>
@@ -82,7 +82,7 @@ export default function WorkProgram() {
             date: "22 February 2024"
           },
         ].map((cardContent)=>(
-          <CardSimple className="border border-grey-5 gap-4 shadow-[0px_4px_1px_rgba(205,205,205,1)] md:shadow-[0px_6px_1px_rgba(205,205,205,1)]">
+          <CardSimple className="bg-white border border-grey-5 gap-4 shadow-[0px_4px_1px_rgba(205,205,205,1)] md:shadow-[0px_6px_1px_rgba(205,205,205,1)]">
           <div className="flex flex-col gap-3">
             <div className="flex flex-row justify-between">
               <div className="flex flex-row gap-4">

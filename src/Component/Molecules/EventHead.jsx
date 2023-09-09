@@ -2,14 +2,14 @@ import React from "react";
 
 export default function EventHead() {
   return (
-    <div className="flex justify-between container mx-auto">
-      <div>
+    <div className="flex flex-col gap-6 md:gap-0 md:flex-row justify-between container mx-auto">
+      <div className="">
         <h1 className="font-extrabold text-6xl text-primary-1 drop-shadow-[0_4px_4px_rgba(85,183,255,1)]">
           POPULAR <br /> EVENT
         </h1>
         <h2 className="text-3xl font-extrabold">UKM IK</h2>
       </div>
-      <div className="w-3/5">
+      <div className="w-3/5 border">
         <p className="text-grey-5">
           UKM Informatika dan Komputer merupakan organisasi yang bertujuan untuk
           ikut berperan menggali, meningkatkan dan mengembangkan kreatifitas di

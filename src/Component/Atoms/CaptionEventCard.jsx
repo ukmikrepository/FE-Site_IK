@@ -9,7 +9,7 @@ export default function CaptionEventCard({ title, date }) {
       <Button
         anotherClass={`hidden group-hover:block mt-2 drop-shadow-[0_4px_4px_rgba(85,183,255,1)]`}
         eventHandler={() => {
-          fetch("http://ukmik.utdi.ac.id:3400/api/ca-list/1/2")
+          fetch("https://ukmik.utdi.ac.id/api/ca-list/1/2")
             .then((response) => response.json())
             .then((responseData) => {
               console.log(responseData)

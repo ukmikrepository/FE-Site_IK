@@ -9,7 +9,7 @@ export default function EventHead() {
         </h1>
         <h2 className="text-3xl font-extrabold">UKM IK</h2>
       </div>
-      <div className="w-3/5 border">
+      <div className="w-3/5">
         <p className="text-grey-5">
           UKM Informatika dan Komputer merupakan organisasi yang bertujuan untuk
           ikut berperan menggali, meningkatkan dan mengembangkan kreatifitas di

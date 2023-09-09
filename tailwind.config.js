@@ -1,12 +1,10 @@
 module.exports = {
-  content: [
-    "./src/**/*.{js,jsx,ts,tsx}",
-  ],
+  content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
     extend: {
       fontFamily: {
-        'poppins': ['Poppins', 'sans-serif'],
-        'mont': ['Montserrat', 'sans-serif'],
+        poppins: ["Poppins", "sans-serif"],
+        mont: ["Montserrat", "sans-serif"],
       },
       colors: {
         "primary-1": "#1A8CE0",
@@ -32,7 +30,7 @@ module.exports = {
       },
     },
     transitionProperty: {
-      'size': 'width, height'
+      size: "width, height",
     },
     container: {
       padding: {
@@ -64,4 +62,4 @@ module.exports = {
     },
   },
   plugins: [],
-}
+};

@@ -1,5 +1,5 @@
 import React from 'react'
-import { CardSimple } from '../../Molecules/CardSimple'
+import CardSimple from '../../Molecules/CardSimple'
 
 export default function WorkProgram() {
   return (

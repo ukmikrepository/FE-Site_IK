@@ -1,10 +1,8 @@
 import React from "react";
 import {
-  BiLogoFacebook,
   BiLogoGmail,
   BiLogoInstagram,
   BiLogoWhatsapp,
-  BiLogoYoutube,
 } from "react-icons/bi";
 import Input from "../../Atoms/Input";
 import Button from "../../Atoms/Button";

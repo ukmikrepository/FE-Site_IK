@@ -1,25 +1,19 @@
-import React from 'react';
+import React from "react";
+import { Routes, Route } from "react-router-dom";
+
 // import Navbar from './Component/Organism/Nav/Navbar'
 // import Footer from './Component/Organism/Nav/Footer'
-import Standard from './Component/Layout/Standard';
-import Hero from './Component/Organism/Content/Hero';
-import Event from './Component/Organism/Content/Event';
-import WorkProgram from './Component/Organism/Content/WorkProgram';
-import Experience from './Component/Organism/Content/Experience';
-import Contact from './Component/Organism/Content/Contact';
-import Oprec from './Component/Organism/Content/Oprec';
+import Home from "./Pages/Home";
+import Standard from "./Component/Layout/Standard";
+import FormOprec from "./Pages/FormOprec";
 
-function App({user}) {
+function App({ user }) {
   return (
     <>
-    <Standard>
-      <Hero/>
-      <Oprec />
-      <Event/>
-      <WorkProgram/>
-      <Experience/>
-      <Contact/>
-    </Standard>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/recruitment" element={<FormOprec />} />
+      </Routes>
     </>
   );
 }

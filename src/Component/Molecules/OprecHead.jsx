@@ -1,6 +1,7 @@
 import React from "react";
 import Button from "../Atoms/Button";
 import { BsWhatsapp } from "react-icons/bs";
+import { Link } from "react-router-dom";
 
 export default function OprecHead() {
   return (
@@ -34,7 +35,9 @@ export default function OprecHead() {
           color="bg-primary-1"
           anotherClass="text-white rounded-full shadow-lg transition-all ease-in-out duration-500 hover:shadow-2xl hover:bg-gradient-to-l from-green-400 via-teal-500 to-cyan-600 hover:animate-bounce"
         >
+          <Link to="/recruitment">
           Daftar Sekarang
+          </Link>
         </Button>
       </div>
     </div>

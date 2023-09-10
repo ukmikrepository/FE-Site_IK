@@ -12,11 +12,11 @@ export default function Home() {
     <>
       <Standard>
         <Hero />
-        {/* <Oprec />
+        <Oprec />
         <Event />
         <WorkProgram />
         <Experience />
-        <Contact /> */}
+        <Contact />
       </Standard>
     </>
   );

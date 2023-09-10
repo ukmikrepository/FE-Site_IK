@@ -2,6 +2,7 @@ import React from "react";
 import OprecPhase from "../../Molecules/OprecPhase";
 import OprecHead from "../../Molecules/OprecHead";
 import CardSimple from "../../Molecules/CardSimple";
+import { isMobile } from "react-device-detect";
 
 export default function Oprec() {
   const phaseData = [
@@ -53,11 +54,11 @@ export default function Oprec() {
 
   return (
     <div className="w-full bg-primary-9 py-12">
-      <div className="container flex mx-auto justify-between">
-        <div className="w-3/5">
+      <div className="container flex md:flex-row flex-col mx-auto justify-between">
+        <div className="md:w-3/5 w-full">
           <OprecHead />
-          <h1 className="text-center font-mont font-bold mt-8">Benefit Join UKM IK</h1>
-          <div className="flex gap-4 mt-4">
+          <h1 className="text-center font-mont font-bold mt-12 md:mt-8">Benefit Join UKM IK</h1>
+          <div className="flex flex-wrap md:flex-nowrap justify-center md:justify-start gap-4 mt-4">
             {benefitData.map(({title, desc}, key)=>{
               return <CardSimple className="bg-white rounded-none gap-2 w-[150px] justify-center items-center text-center">
                 <img src={`/img/oprec/benefit${key+1}.png`} alt="" className="w-[50px]" />
@@ -68,7 +69,10 @@ export default function Oprec() {
           </div>
         </div>
 
-        <div className="w-2/5 flex flex-col gap-12">
+        <div className={`md:w-2/5 w-fit flex flex-col md:gap-12 gap-6  ${isMobile ? 'container' : ''}`}>
+          {isMobile ? (
+            <h1 className="font-mont font-extrabold text-primary-4 drop-shadow-[0_4px_3px_rgba(85,183,255,1)] mt-12 text-center">Timeline Calon Anggota</h1>
+          ) : ""}
           {phaseData.map(({ title, periode, desc }, key) => {
             return (
               <OprecPhase

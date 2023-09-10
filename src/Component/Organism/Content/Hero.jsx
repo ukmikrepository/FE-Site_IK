@@ -13,11 +13,6 @@ export default function Hero() {
             alt="Hero-background"
             className="h-screen object-cover "
           />
-          <img
-            src="img/Hero_BG.webp"
-            alt="Hero-background"
-            className="h-screen object-cover "
-          />
           {/* <span className="bg-[#540D37] w-full h-[180px]"></span> */}
         </div>
         {/* Rehat sejenak */}

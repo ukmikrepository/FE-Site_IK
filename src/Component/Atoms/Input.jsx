@@ -1,10 +1,10 @@
 import React from "react";
 
-const Input = ({ label, type, placeholder, value, name, onChange = undefined, hasFullBorder, className }) => {
+const Input = ({ label, type, placeholder, value, name, onChange = undefined, hasFullBorder, className, classLabel }) => {
   return (
     <div className={`mb-4 ${type === "radio" ? "flex items-center" : "w-full"}`}>
       {type !== "radio" && (
-        <label className="block text-grey-8 text-sm mb-2">{label}</label>
+        <label className={`${classLabel} block text-sm mb-2`}>{label}</label>
       )}
       <span>
       <input

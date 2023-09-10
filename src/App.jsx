@@ -7,12 +7,14 @@ import Event from './Component/Organism/Content/Event';
 import WorkProgram from './Component/Organism/Content/WorkProgram';
 import Experience from './Component/Organism/Content/Experience';
 import Contact from './Component/Organism/Content/Contact';
+import Oprec from './Component/Organism/Content/Oprec';
 
 function App({user}) {
   return (
     <>
     <Standard>
       <Hero/>
+      <Oprec />
       <Event/>
       <WorkProgram/>
       <Experience/>

@@ -43,7 +43,8 @@ export default function Footer() {
                 </span>
                 <span className="flex items-center gap-1 text-[9px] font-thin text-grey-9">
                   <HiPhone className="text-sm" />
-                  <a target="_blank" href="https://wa.me/6282171392206">
+                  <a href="https://wa.me/6282171392206" target="_blank"
+  rel="noopener noreferrer">
                     082171392206
                   </a>
                 </span>

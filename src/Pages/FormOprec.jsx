@@ -1,9 +1,8 @@
 import React, {useState} from 'react'
-import { CardSimple } from '../../Molecules/CardSimple'
-import Input from '../../Atoms/Input';
-import Button from '../../Atoms/Button';
+import CardSimple from '../Component/Molecules/CardSimple'
+import Input from '../Component/Atoms/Input';
 
-export default function Form() {
+export default function FormOprec() {
     const [imagePreview, setImagePreview] = useState(null);
 
     const handleImageChange = (e) => {

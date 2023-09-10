@@ -4,18 +4,18 @@ import { BsWhatsapp } from "react-icons/bs";
 
 export default function OprecHead() {
   return (
-    <div className="flex flex-col gap-2">
-      <h1 className="text-5xl font-mont font-extrabold text-white drop-shadow-[0_4px_3px_rgba(85,183,255,1)]">
+    <div className="flex flex-col gap-2 w-full">
+      <h1 className="text-4xl md:text-5xl font-mont w-max mx-auto md:mx-0 font-extrabold text-white text-center md:text-left drop-shadow-[0_4px_3px_rgba(85,183,255,1)]">
         OPEN <br /> RECRUITMENT
       </h1>
-      <h6 className="font-mont font-extrabold text-primary-4 drop-shadow-[0_4px_3px_rgba(85,183,255,1)]">
+      <h6 className="font-mont font-extrabold text-primary-4 text-center md:text-left drop-shadow-[0_4px_3px_rgba(85,183,255,1)]">
         11 - 18 September 2023
       </h6>
-      <p className="mt-4 w-3/4">
+      <p className="mt-4 md:w-3/4 w-full text-center md:text-left">
         Yuk, jadi bagian dari UKMIK! <br /> Pendaftaran anggota kami sudah
         dibuka. Daftar sekarang dengan satu klik tombol di bawah ini! 🚀😎
       </p>
-      <div className="flex gap-4 mt-4">
+      <div className="flex gap-4 mt-4 justify-center md:justify-start">
         <a
           href="https://api.whatsapp.com/send?phone=6282171392206&text=Halo%20kak%3F%20Mau%20nanya%20perihal%20Oprec%20UKM%20IK%20dong!"
           target="_blank"

@@ -37,7 +37,7 @@ export default function Navbar() {
       <div className="relative">
       <Button anotherClass={`${open ? `hidden` : `block md:hidden`} transition-all transform duration-1000 ease-in-out`} eventHandler={handleOpen} color="bg-transparent"><GiHamburgerMenu /></Button>
       <Button anotherClass={`${open ? 'block md:hidden' : 'hidden'} transition-all transform duration-1000 ease-in-out`} eventHandler={handleOpen} color="bg-transparent"><AiOutlineClose /></Button>
-      <ul className={`flex flex-col gap-2 md:gap-8 md:flex-row mt-2 items-center bg-primary-1 py-2 px-4 absolute md:relative w-max ${open ? "right-0" : "-right-36"}  transition transition-all duration-500`}>
+      <ul className={`flex flex-col gap-2 md:gap-8 md:flex-row mt-6 md:mt-0 items-center backdrop-blur-sm ${!scrolled ? "bg-[rgba(0,0,0,0.10)]" : "bg-primary-1"} md:backdrop-blur-none md:bg-transparent md:static py-2 px-4 absolute w-max ${open ? "-right-4" : "-right-36"}  transition transition-all duration-500`}>
         <li>Home</li>
         <li>Profile</li>
         <li>Blog</li>

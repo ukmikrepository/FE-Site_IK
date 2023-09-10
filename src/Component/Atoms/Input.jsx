@@ -1,6 +1,6 @@
 import React from "react";
 
-const Input = ({ label, type, placeholder, value, name, onChange = undefined, hasFullBorder }) => {
+const Input = ({ label, type, placeholder, value, name, onChange = undefined, hasFullBorder, className }) => {
   return (
     <div className={`mb-4 ${type === "radio" ? "flex items-center" : "w-full"}`}>
       {type !== "radio" && (
@@ -14,7 +14,7 @@ const Input = ({ label, type, placeholder, value, name, onChange = undefined, ha
         name={name}
         onChange={onChange === undefined ? onChange : ""}
         id={value}
-        className={`py-2 outline-none text-sm w-full text-grey-2 flex ${
+        className={`${className} py-2 outline-none text-sm w-full text-grey-2 flex ${
           hasFullBorder ? "rounded-xl px-4" : "border-b border-black"
         }`}
       />

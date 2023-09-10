@@ -6,9 +6,9 @@ import Footer from '../Organism/Nav/Footer'
 export default function Standard({ children, className }) {
   return (
     <Layout className={`${className} flex min-h-screen flex-col justify-between`}>
-        <Navbar/>
+        <Navbar />
         {children}
-        <Footer/>
+        {/* <Footer/> */}
     </Layout>
   )
 }

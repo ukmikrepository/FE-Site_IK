@@ -5,14 +5,14 @@ import { Routes, Route } from "react-router-dom";
 // import Footer from './Component/Organism/Nav/Footer'
 import Home from "./Pages/Home";
 import Standard from "./Component/Layout/Standard";
-import FormOprec from "./Pages/FormOprec";
+import Oprec from "./Pages/Oprec";
 
 function App({ user }) {
   return (
     <>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/recruitment" element={<FormOprec />} />
+        <Route path="/recruitment" element={<Oprec />} />
       </Routes>
     </>
   );

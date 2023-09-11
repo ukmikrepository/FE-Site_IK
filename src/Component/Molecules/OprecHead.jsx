@@ -18,7 +18,7 @@ export default function OprecHead() {
       </p>
       <div className="flex gap-4 mt-4 justify-center md:justify-start">
         <a
-          href="https://api.whatsapp.com/send?phone=6282171392206&text=Halo%20kak%3F%20Mau%20nanya%20perihal%20Oprec%20UKM%20IK%20dong!"
+          href="https://api.whatsapp.com/send?phone=6285718487315&text=Halo%20kak%3F%20Mau%20nanya%20perihal%20Oprec%20UKM%20IK%20dong!"
           target="_blank"
           rel="noopener noreferrer"
         >

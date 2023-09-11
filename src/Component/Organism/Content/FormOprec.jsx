@@ -317,7 +317,7 @@ export default function FormOprec({setFinish}) {
                 <select
                   name="j_kelamin"
                   id="j_kelamin"
-                  className="bg-[#f4f4f4] py-3 rounded-xl outline-none"
+                  className="bg-[#f4f4f4] text-grey-6 py-3 px-3 rounded-xl outline-none"
                 >
                   <option value="default">Pilih Jenis Kelamin </option>
                   <option value="1">Laki-Laki</option>
@@ -331,7 +331,7 @@ export default function FormOprec({setFinish}) {
                 <select
                   name="fakultas"
                   id="fakultas"
-                  className="bg-[#f4f4f4] py-3 rounded-xl outline-none"
+                  className="bg-[#f4f4f4] py-3 px-3 text-grey-6 rounded-xl outline-none"
                   onChange={facultyChange}
                 >
                   <option value="default">Pilih Fakultas </option>
@@ -349,7 +349,7 @@ export default function FormOprec({setFinish}) {
                   disabled={!isProdi}
                   className={`${
                     isProdi ? "bg-[#f4f4f4] text-grey-2" : "bg-[#c4c4c4] text-grey-7"
-                  } outline-none py-3 rounded-xl`}
+                  } outline-none py-3 px-3 text-grey-6 rounded-xl`}
                 >
                   <option value="default">Pilih Program Studi </option>
                   {prodi.map(({ id, prodi }) => {

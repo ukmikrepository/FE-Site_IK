@@ -24,7 +24,7 @@ export default function OprecHead() {
         >
           <Button
             color="bg-black"
-            anotherClass="group flex items-center gap-2 text-white rounded-full shadow-lg transition-all ease-in-out duration-500 hover:shadow-2xl hover:bg-gradient-to-l from-gray-800 via-gray-700 to-gray-600 hover:animate-bounce"
+            anotherClass="group flex text-sm items-center gap-2 text-white rounded-full shadow-lg transition-all ease-in-out duration-500 hover:shadow-2xl hover:bg-gradient-to-l from-gray-800 via-gray-700 to-gray-600 hover:animate-bounce"
           >
             <BsWhatsapp className="w-0 transition-width duration-1000 group-hover:w-fit" />
             Contact Person
@@ -33,7 +33,7 @@ export default function OprecHead() {
 
         <Button
           color="bg-primary-1"
-          anotherClass="text-white rounded-full shadow-lg transition-all ease-in-out duration-500 hover:shadow-2xl hover:bg-gradient-to-l from-green-400 via-teal-500 to-cyan-600 hover:animate-bounce"
+          anotherClass="text-white text-sm rounded-full shadow-lg transition-all ease-in-out duration-500 hover:shadow-2xl hover:bg-gradient-to-l from-green-400 via-teal-500 to-cyan-600 hover:animate-bounce"
         >
           <Link to="/recruitment">
           Daftar Sekarang

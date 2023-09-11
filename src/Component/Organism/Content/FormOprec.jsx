@@ -3,8 +3,9 @@ import CardSimple from "../../Molecules/CardSimple";
 import Input from "../../Atoms/Input";
 import Button from "../../Atoms/Button";
 import { ToastContainer, toast } from "react-toastify";
+import { redirect } from "react-router-dom";
 
-export default function FormOprec() {
+export default function FormOprec({setFinish}) {
   const [imagePreview, setImagePreview] = useState(null);
   const [customText, setCustomText] = useState("Pilih gambar");
   const [isProdi, setIsProdi] = useState(false);
@@ -100,12 +101,9 @@ export default function FormOprec() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsLoading(true);
-
+  
     const formData = new FormData();
-    formData.append(
-      "nama",
-      `${e.target.firstname.value} ${e.target.lastname.value}`
-    );
+    formData.append("nama", `${e.target.firstname.value} ${e.target.lastname.value}`);
     formData.append("nim", e.target.nim.value);
     formData.append("angkatan", e.target.angkatan.value);
     formData.append("j_kelamin", e.target.j_kelamin.value);
@@ -113,39 +111,48 @@ export default function FormOprec() {
     formData.append("jurusan", e.target.jurusan.value);
     formData.append("email", e.target.email.value);
     formData.append("no_telp", e.target.no_telp.value);
-
+  
     if (selectedFile) {
       formData.append("image", selectedFile);
     }
-
+  
+    // Validasi form sebelum mengirim data
+    const isFormValid = validateForm(e.target);
+  
+    if (!isFormValid) {
+      setIsLoading(false);
+      return; // Jangan lanjutkan jika form tidak valid
+    }
+  
     try {
       const response = await fetch("https://ukmik.utdi.ac.id/api/ca", {
         method: "POST",
         body: formData,
         headers: {
-          // Jangan lupa untuk mengatur header sesuai kebutuhan (biasanya tidak perlu mengatur 'Content-Type')
           Authorization: `Bearer ${localStorage.getItem("accessToken")}`,
         },
       });
       const data = await response.json();
-
+  
       if (!response.ok) {
         throw new Error(data.message);
       } else {
+        // Handle sukses
         toast.success("Terimakasih telah mendaftar UKM IK!!", {
-          position: "top-center",
-          autoClose: 2000,
-          hideProgressBar: false,
-          closeOnClick: true,
-          pauseOnHover: true,
-          draggable: true,
-          progress: undefined,
-          theme: "colored",
-        });
+            position: "top-center",
+            autoClose: 2000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "colored",
+          });
+          localStorage.setItem('isFormFilled','true');
+          setFinish('true');
       }
-
-      // Handle respon sukses di sini
     } catch (error) {
+      // Handle kesalahan
       toast.error(`${error.message}`, {
         position: "top-center",
         autoClose: 2000,
@@ -156,11 +163,93 @@ export default function FormOprec() {
         progress: undefined,
         theme: "colored",
       });
-      // Handle kesalahan di sini
     } finally {
       setIsLoading(false);
     }
   };
+  
+  // Fungsi untuk validasi form
+  const validateForm = (form) => {
+    const firstnameInput = form.firstname;
+    const lastnameInput = form.lastname;
+    const nimInput = form.nim;
+    const angkatanInput = form.angkatan;
+    const emailInput = form.email;
+  
+    let isFormValid = true;
+  
+    // Validasi nama depan
+    if (firstnameInput.value.trim() === "") {
+      setInvalidInput(firstnameInput, "Nama depan harus diisi.");
+      isFormValid = false;
+    } else {
+      setValidInput(firstnameInput);
+    }
+  
+    // Validasi nama belakang
+    if (lastnameInput.value.trim() === "") {
+      setInvalidInput(lastnameInput, "Nama belakang harus diisi.");
+      isFormValid = false;
+    } else {
+      setValidInput(lastnameInput);
+    }
+  
+    // Validasi NIM
+    const nimValue = nimInput.value.trim();
+    if (nimValue === "" || nimValue.length > 11 || !/^\d+$/.test(nimValue)) {
+      setInvalidInput(nimInput, "NIM harus terdiri dari 11 angka.");
+      isFormValid = false;
+    } else {
+      setValidInput(nimInput);
+    }
+  
+    // Validasi angkatan
+    const angkatanValue = angkatanInput.value.trim();
+    if (angkatanValue === "" || angkatanValue.length > 4 || !/^\d+$/.test(angkatanValue)) {
+      setInvalidInput(angkatanInput, "Angkatan harus terdiri dari 4 angka.");
+      isFormValid = false;
+    } else {
+      setValidInput(angkatanInput);
+    }
+  
+    // Validasi email
+    const emailValue = emailInput.value.trim();
+    if (emailValue === "" || !isValidEmail(emailValue)) {
+      setInvalidInput(emailInput, "Email tidak valid.");
+      isFormValid = false;
+    } else {
+      setValidInput(emailInput);
+    }
+  
+    return isFormValid;
+  };
+  
+  // Fungsi untuk memvalidasi email
+  const isValidEmail = (email) => {
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailPattern.test(email);
+  };
+  
+  // Fungsi untuk menandai input yang tidak valid
+  const setInvalidInput = (inputElement, errorMessage) => {
+    inputElement.style.border = "2px solid red";
+    const errorLabel = document.createElement("p");
+    errorLabel.textContent = errorMessage;
+    errorLabel.style.color = "red";
+    errorLabel.style.fontSize = "12px";
+    errorLabel.style.marginTop = "4px";
+    inputElement.parentNode.appendChild(errorLabel);
+  };
+  
+  // Fungsi untuk menghapus tanda input yang tidak valid
+  const setValidInput = (inputElement) => {
+    inputElement.style.border = "1px solid #ccc";
+    const errorLabel = inputElement.parentNode.querySelector("p");
+    if (errorLabel) {
+      inputElement.parentNode.removeChild(errorLabel);
+    }
+  };
+
   return (
     <form onSubmit={handleSubmit} id="regisForm">
       <div className="w-11/12 md:w-4/5 mx-auto flex flex-col gap-4 md:gap-y-8">
@@ -202,7 +291,7 @@ export default function FormOprec() {
                 />
               </div>
             </div>
-            <div className="mb-6 grid xs:grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-2 md:gap-y-3">
+            <div className="mb-6 grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-2 md:gap-y-3">
               <Input
                 label="NIM"
                 name="nim"
@@ -221,9 +310,9 @@ export default function FormOprec() {
                 className="bg-[#F4F4F4] placeholder:text-sm py-3"
                 classLabel="text-black font-black text-base"
               />
-              <div className="flex flex-col justify-center gap-1 py-0 -mt-3">
+              <div className="flex flex-col justify-center gap-1 py-0 -mt-3 mb-4 md:md">
                 <label htmlFor="j_kelamin" className="font-bold">
-                  Fakultas
+                  Jenis Kelamin
                 </label>
                 <select
                   name="j_kelamin"
@@ -235,7 +324,7 @@ export default function FormOprec() {
                   <option value="2">Perempuan</option>
                 </select>
               </div>
-              <div className="flex flex-col justify-center gap-1 py-0 -mt-3">
+              <div className="flex flex-col justify-center gap-1 py-0 -mt-3 mb-4 md:md">
                 <label htmlFor="fakultas" className="font-bold">
                   Fakultas
                 </label>
@@ -250,7 +339,7 @@ export default function FormOprec() {
                   <option value="2">Fakultas Manajemen & Bisnis</option>
                 </select>
               </div>
-              <div className="flex flex-col justify-center gap-1 py-0 -mt-3">
+              <div className="flex flex-col justify-center gap-1 py-0 -mt-3 mb-4 md:md">
                 <label htmlFor="jurusan" className="font-bold">
                   Program Studi
                 </label>
@@ -305,7 +394,7 @@ export default function FormOprec() {
                       <img
                         src={imagePreview}
                         alt="Preview"
-                        className="max-w-xs max-h-xs object-cover rounded-lg"
+                        className="max-w-xs max-h-xs w-1/2 object-cover rounded-lg"
                       />
                     ) : (
                       <div>

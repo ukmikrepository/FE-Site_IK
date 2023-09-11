@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "react-toastify/dist/ReactToastify.css";
 import FormOprec from "../Component/Organism/Content/FormOprec";
 import CardSimple from "../Component/Molecules/CardSimple";
@@ -7,7 +7,11 @@ import Button from "../Component/Atoms/Button";
 import { BiLogoWhatsapp } from "react-icons/bi";
 
 export default function Oprec() {
-  const [done, setDone] = useState(localStorage.getItem("isFormFilled"));
+  const [done, setDone] = useState("true");
+
+  useEffect(() => {
+    setDone(localStorage.getItem("isFormFilled"));
+  }, [done]);
 
   return (
     <div className="w-full min-h-screen bg-[#FAFAFA] py-8">
@@ -21,7 +25,7 @@ export default function Oprec() {
         </Link>
       </div>
       {done !== "true" ? (
-        <FormOprec />
+        <FormOprec setFinish={setDone} />
       ) : (
         <div className="container w-full md:w-2/3 mx-auto mt-8">
           <div className="text-center">
@@ -44,23 +48,28 @@ export default function Oprec() {
               <b>group WhatsApp Calon Anggota UKM IK</b>
             </span>
             <img src="/img/oprec/done.jpg" className="w-[350px]" alt="" />
-            <div className="flex gap-4 mt-4">
-          <Button
-            color="bg-black"
-            anotherClass="group flex items-center text-sm gap-2 text-white rounded-full shadow-lg transition-all ease-in-out duration-500 hover:shadow-2xl hover:bg-gradient-to-l from-gray-800 via-gray-700 to-gray-600 hover:animate-bounce"
-          >
-           <Link to="/">
-           Kembali ke Homepage
-           </Link>
-          </Button>
+            <div className="flex flex-col md:flex-row gap-4 mt-4">
+              <Button
+                color="bg-black"
+                anotherClass="group flex items-center text-sm gap-2 text-white rounded-full shadow-lg transition-all ease-in-out duration-500 hover:shadow-2xl hover:bg-gradient-to-l from-gray-800 via-gray-700 to-gray-600 hover:animate-bounce"
+              >
+                <Link to="/">Kembali ke Homepage</Link>
+              </Button>
 
-        <Button
-          color="bg-primary-1"
-          anotherClass="text-white text-sm rounded-full shadow-lg transition-all ease-in-out duration-500 hover:shadow-2xl hover:bg-gradient-to-l from-green-400 via-teal-500 to-cyan-600 hover:animate-bounce"
-        >
-          <Link to="https://chat.whatsapp.com/C5VchQtXiOv2gdWfIp93T6"  target="_blank" className="flex items-center gap-2"> <BiLogoWhatsapp /> <span>Join Group WA</span></Link>
-        </Button>
-      </div>
+              <Button
+                color="bg-primary-1"
+                anotherClass="text-white rounded-full shadow-lg transition-all ease-in-out duration-500 hover:shadow-2xl hover:bg-gradient-to-l from-green-400 via-teal-500 to-cyan-600 hover:animate-bounce"
+              >
+                <Link
+                  to="https://chat.whatsapp.com/C5VchQtXiOv2gdWfIp93T6"
+                  target="_blank"
+                  className="flex items-center gap-2"
+                >
+                  {" "}
+                  <BiLogoWhatsapp /> <span>Join Group WA</span>
+                </Link>
+              </Button>
+            </div>
           </CardSimple>
         </div>
       )}

@@ -25,7 +25,7 @@ export default function Experience() {
                   <div className="border border-primary-9 rounded-md px-4 py-6 flex flex-col gap-6 md:border-none">
                     <div className="flex flex-row md:flex-col gap-6">
                       <img src="/img/studyclub.png" className="w-[100px] order-2" alt="" />
-                      <h1 className="text-white text-md w-3/4">Bergabunglah dengan UKM IK untuk meraih prestasi, ikuti lomba dan event, serta berbagi pengetahuan dengan banyak anggota berpengalaman.</h1>
+                      <h1 className="text-white text-md md:text-sm w-3/4 md:w-full">Bergabunglah dengan UKM IK untuk meraih prestasi, ikuti lomba dan event, serta berbagi pengetahuan dengan banyak anggota berpengalaman.</h1>
                     </div>
                   <div className="flex justify-between items-center">
                     <div className="flex flex-row gap-2 md:hidden">
@@ -45,7 +45,7 @@ export default function Experience() {
                 <div className="border border-primary-9 rounded-md px-4 py-6 flex flex-col gap-6 md:border-none">
                   <div className="flex flex-row md:flex-col gap-6">
                     <img src="/img/ikdev.png" className="w-[100px]" alt="" />
-                    <h1 className="text-white text-md w-3/4">Bergabunglah dengan UKM IK untuk meraih prestasi, ikuti lomba dan event, serta berbagi pengetahuan dengan banyak anggota berpengalaman.</h1>
+                    <h1 className="text-white text-md md:text-sm w-3/4 md:w-full">Bergabunglah dengan UKM IK untuk meraih prestasi, ikuti lomba dan event, serta berbagi pengetahuan dengan banyak anggota berpengalaman.</h1>
                   </div>
                   <div className="flex justify-between items-center">
                     <div className="flex flex-row gap-2 md:hidden">
@@ -61,7 +61,7 @@ export default function Experience() {
                 <div className="border border-primary-9 rounded-md px-4 py-6 flex flex-col gap-6 md:border-none">
                   <div className="flex flex-row md:flex-col gap-6">
                     <img src="/img/santai.png" className="w-[100px] order-2" alt="" />
-                    <h1 className="text-white text-md w-3/4">Bergabunglah dengan UKM IK untuk meraih prestasi, ikuti lomba dan event, serta berbagi pengetahuan dengan banyak anggota berpengalaman.</h1>
+                    <h1 className="text-white text-md md:text-sm w-3/4 md:w-full">Bergabunglah dengan UKM IK untuk meraih prestasi, ikuti lomba dan event, serta berbagi pengetahuan dengan banyak anggota berpengalaman.</h1>
                   </div>
                   <div className="flex justify-between items-center">
                     <div className="flex flex-row gap-2 md:hidden">

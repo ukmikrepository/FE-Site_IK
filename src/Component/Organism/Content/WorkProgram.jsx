@@ -82,11 +82,11 @@ export default function WorkProgram() {
             date: "22 February 2024"
           },
         ].map((cardContent)=>(
-          <CardSimple className="bg-white border border-grey-5 gap-4 shadow-[0px_4px_1px_rgba(205,205,205,1)] md:shadow-[0px_6px_1px_rgba(205,205,205,1)]">
+          <CardSimple className="bg-white gap-4 shadow-[0px_4px_1px_rgba(205,205,205,1)] backdrop-blur-md md:shadow-[0px_6px_1px_rgba(205,205,205,1)]">
           <div className="flex flex-col gap-3">
             <div className="flex flex-row justify-between">
               <div className="flex flex-row gap-4">
-                  <div className="w-14 rounded-full bg-primary-4"></div>
+                  <img src="/img/logo_ukmik.png" className='w-14' alt="" />
                   <div className="flex flex-col gap-2 ">
                     <h2 className="font-poppins text-xl  leading-[30px] text-grey-1">{`${cardContent.heading}`}</h2>
                     <p className="font-poppins font-light text-xs  leading-[18px]">{`${cardContent.division}`}</p>

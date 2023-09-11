@@ -29,8 +29,8 @@ export default function Hero() {
           {/* <span className="bg-[#540D37] w-full h-[180px]"></span> */}
         </div>
         {/* Rehat sejenak */}
-        <div className="w-screen xs:pt-[380px] lg:pt-32 2xl:pt-56 pb-[60px] overflow-hidden">
-          <div className="container relative mx-auto flex flex-col lg:flex-row justify-between gap-4 lg:px-  overflow-hidden">
+        <div className={`${!isMobile ? "container" : "pl-4"} w-full xs:pt-[380px] lg:pt-32 2xl:pt-56 pb-[60px] overflow-hidden`}>
+          <div className="relative mx-auto flex flex-col lg:flex-row justify-between gap-4 lg:px-4 overflow-hidden">
             {isMobile ? (
               <img
                 src="img/astro-flip.png"
@@ -48,14 +48,14 @@ export default function Hero() {
                 />
               </div>
             )}
-            <div className="flex flex-col h-screen pb-36 md:pb-0 md:h-fit md:justify-start justify-end md:gap-6 2xl:gap-8 white">
-              <h1 className="font-mont font-extrabold  text-[40px] leading-normal lg:text-[60px] lg:leading-[64px] text-[#C6E7FF] drop-shadow-[0_8px_8px_rgba(109,124,255,1)]">
+            <div className="flex flex-col gap-4 h-screen pb-36 md:pb-0 md:h-fit md:justify-start justify-end gap-0 md:gap-6 2xl:gap-8 white">
+              <h1 className="font-mont font-extrabold  text-[40px] leading-none lg:text-[60px] lg:leading-[64px] text-[#C6E7FF] drop-shadow-[0_8px_8px_rgba(109,124,255,1)]">
                 <RandomReveal isPlaying duration={1} characters="Hello" />
               </h1>
-              <h1 className="font-mont font-extrabold  text-[40px] leading-normal lg:text-[60px] lg:leading-[64px] text-[#C6E7FF] drop-shadow-[0_8px_8px_rgba(109,124,255,1)]">
+              <h1 className="font-mont font-extrabold  text-[40px] leading-none lg:text-[60px] lg:leading-[64px] text-[#C6E7FF] drop-shadow-[0_8px_8px_rgba(109,124,255,1)]">
                 <RandomReveal isPlaying duration={3} characters="Welcome to" />
               </h1>
-              <h1 className="font-mont font-extrabold  text-[40px] leading-normal lg:text-[60px] lg:leading-[64px] text-[#C6E7FF] drop-shadow-[0_8px_8px_rgba(109,124,255,1)]">
+              <h1 className="font-mont font-extrabold  text-[40px] leading-none lg:text-[60px] lg:leading-[64px] text-[#C6E7FF] drop-shadow-[0_8px_8px_rgba(109,124,255,1)]">
                 <RandomReveal
                   isPlaying
                   duration={4}
@@ -63,7 +63,7 @@ export default function Hero() {
                   characters="IK Space"
                 />
               </h1>
-              <p className="font-poppins font-semibold xs:text-[12px] xs:leading-[16px]  lg:text-[16px] lg:leading-[24px] text-[#A8BBFF]">
+              <p className="font-poppins font-semibold text-[12px] xs:leading-[16px] my-6 md:my-0  lg:text-[16px] lg:leading-[24px] text-[#A8BBFF]">
                 Do You Want to Know More About Us? <br /> Let's Surf Our
                 Website! If You Interest And <br /> Would To Be A Part Of UKMIK,
                 Don't Wait to Click Down Bellow

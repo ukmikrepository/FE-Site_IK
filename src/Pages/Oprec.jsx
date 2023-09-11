@@ -51,14 +51,14 @@ export default function Oprec() {
             <div className="flex flex-col md:flex-row gap-4 mt-4">
               <Button
                 color="bg-black"
-                anotherClass="group flex items-center text-sm gap-2 text-white rounded-full shadow-lg transition-all ease-in-out duration-500 hover:shadow-2xl hover:bg-gradient-to-l from-gray-800 via-gray-700 to-gray-600 hover:animate-bounce"
+                anotherClass="group w-full md:w-fit text-center flex text-center mx-auto items-center text-sm gap-2 text-white rounded-full shadow-lg transition-all ease-in-out duration-500 hover:shadow-2xl hover:bg-gradient-to-l from-gray-800 via-gray-700 to-gray-600 hover:animate-bounce"
               >
-                <Link to="/">Kembali ke Homepage</Link>
+                <Link to="/" className="text-center w-full">Kembali ke Homepage</Link>
               </Button>
 
               <Button
                 color="bg-primary-1"
-                anotherClass="text-white rounded-full shadow-lg transition-all ease-in-out duration-500 hover:shadow-2xl hover:bg-gradient-to-l from-green-400 via-teal-500 to-cyan-600 hover:animate-bounce"
+                anotherClass="text-white text-center mx-auto text-sm rounded-full shadow-lg transition-all ease-in-out duration-500 hover:shadow-2xl hover:bg-gradient-to-l from-green-400 via-teal-500 to-cyan-600 hover:animate-bounce"
               >
                 <Link
                   to="https://chat.whatsapp.com/C5VchQtXiOv2gdWfIp93T6"
@@ -66,7 +66,7 @@ export default function Oprec() {
                   className="flex items-center gap-2"
                 >
                   {" "}
-                  <BiLogoWhatsapp /> <span>Join Group WA</span>
+                  <BiLogoWhatsapp className="text-2xl" /> <span>Join Group WhatsApp</span>
                 </Link>
               </Button>
             </div>

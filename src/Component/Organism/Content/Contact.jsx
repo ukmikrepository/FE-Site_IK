@@ -15,34 +15,38 @@ export default function Contact() {
       <h1 className="font-mont font-extrabold text-center text-3xl">
         Contact Us
       </h1>
-      <p className="text-center font-light text-grey-3">
-        Any question or Remarks? Just Write Us a Message
-      </p>
+      <div className="w-full flex justify-center mt-2">
+        <p className="text-center font-light text-grey-3 w-2/3">
+          Any question or Remarks? Just Write Us a Message
+        </p>
+      </div>
       <div className="mx-auto flex flex-col md:flex-row my-12 container">
         <div className="bg-white md:bg-primary-2 w-full md:w-2/5 rounded-t-[40px] md:rounded-r-none md:rounded-l-[40px]">
           <div className="pt-12 pb-6 md:py-12 px-10 rounded-[40px] text-white">
-            <h1 className="font-mont font-extrabold text-lg text-black md:text-grey-9 mt-2">Contact Information</h1>
+            <h1 className="font-mont font-extrabold text-lg text-black md:text-grey-9 mt-2">
+              Contact Information
+            </h1>
             <p className="text-sm text-black md:text-grey-9 mt-2">
               Kami siap membantu Anda dengan segala pertanyaan, komentar, atau
               permintaan. Jangan ragu untuk menghubungi kami!
             </p>
 
-            <div className="flex flex-row mt-8 justify-between md:gap-8 text-black md:text-grey-9 text-sm md:flex-col ">
+            <div className="flex flex-row flex-wrap gap-4 md:flex-nowrap mt-8 justify-between md:gap-8 text-black md:text-grey-9 text-sm md:flex-col ">
               <div className="flex items-center gap-2">
-                <BiLogoWhatsapp className="w-[20px] h-[20px]"/>{" "}
+                <BiLogoWhatsapp className="w-[20px] h-[20px]" />{" "}
                 <a className="" href="https://wa.me/6282171392206">
                   082171392206
                 </a>
               </div>
               <div className="flex items-center gap-2">
-                <BiLogoInstagram className="w-[20px] h-[20px]"/>{" "}
+                <BiLogoInstagram className="w-[20px] h-[20px]" />{" "}
                 <a className="" href="https://instagram.com/ukmik">
                   @ukmik
                 </a>
               </div>
               <div className="flex items-center gap-2">
-                <BiLogoGmail className="w-[20px] h-[20px]"/>{" "}
-                <a  className="" href="mailto:ukmik@utdi.ac.id">
+                <BiLogoGmail className="w-[20px] h-[20px]" />{" "}
+                <a className="" href="mailto:ukmik@utdi.ac.id">
                   ukmik@utdi.ac.id
                 </a>
               </div>
@@ -99,7 +103,9 @@ export default function Contact() {
                 // className="shadow-lg"
               />
             </div>
-            <h1 className="font-bold mt-6 text-sm text-white md:text-black">What topic you need to ask ?</h1>
+            <h1 className="font-bold mt-6 text-sm text-white md:text-black">
+              What topic you need to ask ?
+            </h1>
             <div className="flex w-full mt-2 gap-5">
               <Input
                 label="Open Recruitment"
@@ -107,7 +113,6 @@ export default function Contact() {
                 type="radio"
                 value="oprec"
                 className="text-white md:text-black"
-                
               />
               <Input
                 label="Study Club"
@@ -125,7 +130,12 @@ export default function Contact() {
               />
             </div>
             <div className="flex w-full justify-end">
-              <Button color="bg-white md:bg-primary-2" anotherClass="text-primary-2 md:text-white rounded-full hover:bg-grey-10 md:hover:bg-primary-1">Send</Button>
+              <Button
+                color="bg-white md:bg-primary-2"
+                anotherClass="text-primary-2 md:text-white rounded-full hover:bg-grey-10 md:hover:bg-primary-1"
+              >
+                Send
+              </Button>
             </div>
           </div>
         </div>

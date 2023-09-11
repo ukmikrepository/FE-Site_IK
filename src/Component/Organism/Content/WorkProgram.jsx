@@ -13,7 +13,7 @@ export default function WorkProgram() {
         </div>
       </div>
 
-      <div className="container mx-auto grid xs:grid-cols-1 md:grid-cols-2 xl:grid-cols-3 justify-between mt-16 2xl:mt-28 gap-y-8 xl:gap-y-10 gap-x-8 xl:gap-x-10">
+      <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 justify-between mt-16 2xl:mt-28 gap-y-8 xl:gap-y-10 gap-x-8 xl:gap-x-10">
       {[
           {
             id: "workProgram1",

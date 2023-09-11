@@ -34,8 +34,8 @@ export default function Contact() {
             <div className="flex flex-row flex-wrap gap-4 md:flex-nowrap mt-8 justify-between md:gap-8 text-black md:text-grey-9 text-sm md:flex-col ">
               <div className="flex items-center gap-2">
                 <BiLogoWhatsapp className="w-[20px] h-[20px]" />{" "}
-                <a className="" href="https://wa.me/6282171392206">
-                  082171392206
+                <a className="" href="https://wa.me/6285718487315">
+                085718487315
                 </a>
               </div>
               <div className="flex items-center gap-2">

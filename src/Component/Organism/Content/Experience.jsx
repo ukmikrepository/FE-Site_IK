@@ -22,8 +22,8 @@ export default function Experience() {
             {/* Card Kiri */}
             <div className="flex items-center px-5 md:px-0">
                 <CardSimple className="w-full md:w-[250px] bg-primary-5 gap-4 drop-shadow-[4px_4px_4px_rgba(85,183,255,1)] md:drop-shadow-[-4px_-4px_4px_rgba(85,183,255,1)] p-4">
-                  <div className="border border-primary-9 rounded-md px-4 py-6 flex flex-col gap-6 md:border-none">
-                    <div className="flex flex-col-reverse md:flex-col gap-6 border items-center md:items-start">
+                  <div className="rounded-md px-4 py-6 flex flex-col gap-6 md:border-none">
+                    <div className="flex flex-col-reverse md:flex-col gap-6 items-center md:items-start">
                       <img src="/img/studyclub.png" className="w-2/4 h-fit md:w-[100px] order-2" alt="" />
                       <h1 className="text-white text-md md:text-sm w-full">Bergabunglah dengan UKM IK untuk meraih prestasi, ikuti lomba dan event, serta berbagi pengetahuan dengan banyak anggota berpengalaman.</h1>
                     </div>
@@ -42,7 +42,7 @@ export default function Experience() {
             {/* Card Kanan */}
             <div className="flex flex-col items-center justify-between gap-8 md:gap-4 px-5 md:px-0">
               <CardSimple className="w-full md:w-[250px]  bg-[#8E1AE0] gap-4 drop-shadow-[4px_4px_4px_rgba(94,20,124,0.8)] p-4">
-                <div className="border border-primary-9 rounded-md px-4 py-6 flex flex-col gap-6 md:border-none">
+                <div className="rounded-md px-4 py-6 flex flex-col gap-6 md:border-none">
                   <div className="flex flex-col items-center md:items-start gap-6">
                     <img src="/img/ikdev.png" className="w-2/4 h-fit" alt="" />
                     <h1 className="text-white text-md md:text-sm w-full md:w-full">Bergabunglah dengan UKM IK untuk meraih prestasi, ikuti lomba dan event, serta berbagi pengetahuan dengan banyak anggota berpengalaman.</h1>
@@ -58,7 +58,7 @@ export default function Experience() {
                 </div>
               </CardSimple>
               <CardSimple className="w-full md:w-[250px]  bg-primary-3 gap-4 drop-shadow-[4px_4px_4px_#056BB7] p-4">
-                <div className="border border-primary-9 rounded-md px-4 py-6 flex flex-col gap-6 md:border-none">
+                <div className=" rounded-md px-4 py-6 flex flex-col gap-6 md:border-none">
                   <div className="flex flex-col gap-6 items-center md:items-start">
                     <img src="/img/santai.png" className="w-1/2" alt="" />
                     <h1 className="text-white text-md md:text-sm w-full md:w-full">Bergabunglah dengan UKM IK untuk meraih prestasi, ikuti lomba dan event, serta berbagi pengetahuan dengan banyak anggota berpengalaman.</h1>

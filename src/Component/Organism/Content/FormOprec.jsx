@@ -3,7 +3,7 @@ import CardSimple from "../../Molecules/CardSimple";
 import Input from "../../Atoms/Input";
 import Button from "../../Atoms/Button";
 import { ToastContainer, toast } from "react-toastify";
-import { redirect } from "react-router-dom";
+// import { redirect } from "react-router-dom";
 
 export default function FormOprec({setFinish}) {
   const [imagePreview, setImagePreview] = useState(null);

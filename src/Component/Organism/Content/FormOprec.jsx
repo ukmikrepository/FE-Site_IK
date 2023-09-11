@@ -305,7 +305,7 @@ export default function FormOprec({setFinish}) {
                 label="Angkatan"
                 name="angkatan"
                 type="text"
-                placeholder="Nama Depan..."
+                placeholder="Masukan angkatan kuliah anda..."
                 hasFullBorder={true}
                 className="bg-[#F4F4F4] placeholder:text-sm py-3"
                 classLabel="text-black font-black text-base"
@@ -348,7 +348,7 @@ export default function FormOprec({setFinish}) {
                   id="jurusan"
                   disabled={!isProdi}
                   className={`${
-                    isProdi ? "bg-[#f4f4f4]" : "bg-[#c4c4c4]"
+                    isProdi ? "bg-[#f4f4f4] text-grey-2" : "bg-[#c4c4c4] text-grey-7"
                   } outline-none py-3 rounded-xl`}
                 >
                   <option value="default">Pilih Program Studi </option>

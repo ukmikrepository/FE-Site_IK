@@ -68,7 +68,7 @@ export default function Navbar() {
                 return isPending
                   ? ""
                   : isActive
-                  ? "font-bold text-primary-1"
+                  ? "font-extrabold font-mont"
                   : "hover:text-primary-2 outline-none";
               }}
             >
@@ -82,7 +82,7 @@ export default function Navbar() {
                 return isPending
                   ? ""
                   : isActive
-                  ? "font-bold text-primary-1"
+                  ? "font-extrabold font-mont"
                   : "hover:text-primary-2 outline-none";
               }}
             >
@@ -96,7 +96,7 @@ export default function Navbar() {
                 return isPending
                   ? ""
                   : isActive
-                  ? "font-bold text-primary-1"
+                  ? "font-extrabold font-mont"
                   : "hover:text-primary-2 outline-none";
               }}
             >
@@ -111,7 +111,7 @@ export default function Navbar() {
                   return isPending
                     ? ""
                     : isActive
-                    ? "font-bold text-primary-1"
+                    ? "font-bold text-primary-2"
                     : "hover:text-white outline-none";
                 }}
               >

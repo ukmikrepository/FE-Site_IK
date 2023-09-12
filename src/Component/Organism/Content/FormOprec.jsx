@@ -381,6 +381,7 @@ export default function FormOprec({setFinish}) {
                   <h3 className="text-black font-black text-base">
                     Upload Foto
                   </h3>
+                  <h6 className="text-sm text-grey-7">Silakan unggah foto anda</h6>
                   <div
                     className={`${
                       imagePreview

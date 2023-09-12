@@ -1,4 +1,5 @@
 import React from "react";
+import { RandomReveal } from "react-random-reveal";
 
 export default function EventHead() {
   return (
@@ -19,13 +20,13 @@ export default function EventHead() {
         <div className="flex text-4xl mt-4 gap-6">
           <div className="flex flex-col">
             <span className="font-extrabold">
-              1000<span className="text-primary-1">+</span>
+            <RandomReveal isPlaying duration={3} characters="1000" characterSet={[1,2,3,4,5,6,7,8,9,0]} /><span className="text-primary-1">+</span>
             </span>
             <span className="text-grey-4 text-xl">ALUMNUS</span>
           </div>
           <div className="flex flex-col">
             <span className="font-extrabold">
-              137<span className="text-primary-1">+</span>
+            <RandomReveal isPlaying duration={3} characters="137" characterSet={[1,2,3,4,5,6,7,8,9,0]} /><span className="text-primary-1">+</span>
             </span>
             <span className="text-grey-4 text-xl">ANGGOTA</span>
           </div>

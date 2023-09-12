@@ -8,15 +8,8 @@ export default function CaptionEventCard({ title, date }) {
       <span className="font-light">{date}</span>
       <Button
         anotherClass={`hidden group-hover:block mt-2 drop-shadow-[0_4px_4px_rgba(85,183,255,1)]`}
-        eventHandler={() => {
-          fetch("https://ukmik.utdi.ac.id/api/ca-list/1/2")
-            .then((response) => response.json())
-            .then((responseData) => {
-              console.log(responseData)
-            })
-            .catch((error) => {
-              console.error("Error fetching data:", error.message);
-            });
+        eventHandler={()=> {
+          alert("click");
         }}
       >
         <span className="drop-shadow-[0_4px_4px_rgba(0,0,0,0.25)]">View</span>

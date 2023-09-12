@@ -13,7 +13,7 @@ export default function WorkProgram() {
         </div>
       </div>
 
-      <div className="container mx-auto grid xs:grid-cols-1 md:grid-cols-2 xl:grid-cols-3 justify-between mt-16 2xl:mt-28 gap-y-8 xl:gap-y-10 gap-x-8 xl:gap-x-10">
+      <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 justify-between mt-16 2xl:mt-28 gap-y-8 xl:gap-y-10 gap-x-8 xl:gap-x-10">
       {[
           {
             id: "workProgram1",
@@ -24,7 +24,8 @@ export default function WorkProgram() {
             imgCircular1: "",
             imgCircular2: "",
             imgCircular3: "",
-            date: "22 February 2024"
+            date: "22 February 2024",
+            disabled: false,
           },
           {
             id: "workProgram1",
@@ -35,7 +36,8 @@ export default function WorkProgram() {
             imgCircular1: "",
             imgCircular2: "",
             imgCircular3: "",
-            date: "22 February 2024"
+            date: "22 February 2024",
+            disabled: false,
           },
           {
             id: "workProgram1",
@@ -46,7 +48,8 @@ export default function WorkProgram() {
             imgCircular1: "",
             imgCircular2: "",
             imgCircular3: "",
-            date: "22 February 2024"
+            date: "22 February 2024",
+            disabled: true,
           },
           {
             id: "workProgram1",
@@ -57,7 +60,8 @@ export default function WorkProgram() {
             imgCircular1: "",
             imgCircular2: "",
             imgCircular3: "",
-            date: "22 February 2024"
+            date: "22 February 2024",
+            disabled: true,
           },
           {
             id: "workProgram1",
@@ -68,7 +72,8 @@ export default function WorkProgram() {
             imgCircular1: "",
             imgCircular2: "",
             imgCircular3: "",
-            date: "22 February 2024"
+            date: "22 February 2024",
+            disabled: true,
           },
           {
             id: "workProgram1",
@@ -79,16 +84,22 @@ export default function WorkProgram() {
             imgCircular1: "",
             imgCircular2: "",
             imgCircular3: "",
-            date: "22 February 2024"
+            date: "22 February 2024",
+            disabled: true,
           },
         ].map((cardContent)=>(
-          <CardSimple className="bg-white border border-grey-5 gap-4 shadow-[0px_4px_1px_rgba(205,205,205,1)] md:shadow-[0px_6px_1px_rgba(205,205,205,1)]">
+          <CardSimple className={`${
+            cardContent.disabled
+              ? "bg-grey-9" // Ubah warna latar belakang untuk kartu "Coming Soon"
+              : "bg-white"
+          } gap-4 shadow-[0px_4px_1px_rgba(205,205,205,1)] backdrop-blur-md md:shadow-[0px_6px_1px_rgba(205,205,205,1)] hover:shadow-lg transition-transform transform hover:scale-105 ease-in-out duration-300`} // Tambahkan efek hover dan perubahan ukuran saat mengarahkan kursor ke kartu
+        >
           <div className="flex flex-col gap-3">
             <div className="flex flex-row justify-between">
               <div className="flex flex-row gap-4">
-                  <div className="w-14 rounded-full bg-primary-4"></div>
+                  <img src="/img/logo_ukmik.png" className='w-14' alt="" />
                   <div className="flex flex-col gap-2 ">
-                    <h2 className="font-poppins text-xl  leading-[30px] text-grey-1">{`${cardContent.heading}`}</h2>
+                    <h2 className="font-poppins text-xl  leading-[30px] text-grey-1">{`${cardContent.disabled ? "Coming Soon" : cardContent.heading}`}</h2>
                     <p className="font-poppins font-light text-xs  leading-[18px]">{`${cardContent.division}`}</p>
                   </div>
               </div>
@@ -99,7 +110,7 @@ export default function WorkProgram() {
 
 
           <div className="w-[312px] 2xl:w-[450px] 2xl:gap-60">
-            <p className="font-poppins font-light text-[10px] 2xl:text-xs  leading-[15px]">{`${cardContent.describ}`}</p>
+            <p className="font-poppins font-light text-[10px] 2xl:text-xs  leading-[15px]">{`${cardContent.disabled ? "Proker ini akan direncanakan segera. ditunggu yaa!" : cardContent.describ}`}</p>
           </div>
 
           <div className="flex flex-row justify-between mt-4">
@@ -108,7 +119,7 @@ export default function WorkProgram() {
             <img src="" alt="" />
             <img src="" alt="" /> */}
             </div>
-            <p className="font-poppins font-semibold text-[14px] text-grey-1 leading-[21px]">Due to : <span className="font-light">{`${cardContent.date}`}</span></p>
+            <p className="font-poppins font-semibold text-[14px] text-grey-1 leading-[21px]">Due to : <span className="font-light">{`${cardContent.disabled ? "Coming Soon" : cardContent.date}`}</span></p>
           </div>
         </CardSimple>
         ))}

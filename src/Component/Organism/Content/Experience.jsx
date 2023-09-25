@@ -4,7 +4,7 @@ import CardSimple from "../../Molecules/CardSimple";
 export default function Experience() {
   return (
     <div>
-      <div className="w-full ">
+      <div className="w-full py-12">
         <div className="container mx-auto flex flex-col gap-16 md:gap-0 md:flex-row justify-around items-center ">
           {/* Section Kiri */}
           <div className="flex flex-col items-center md:items-start gap-0 md:gap-5 md:w-[264px] text-center md:text-left">

@@ -11,7 +11,7 @@ import Button from "../../Atoms/Button";
 
 export default function Contact() {
   return (
-    <div className="w-full h-auto bg-primary-10 mt-24 py-12">
+    <div className="w-full h-auto bg-primary-10 py-12">
       <h1 className="font-mont font-extrabold text-center text-3xl">
         Contact Us
       </h1>

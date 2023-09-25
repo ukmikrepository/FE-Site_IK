@@ -1,9 +1,9 @@
 import React from "react";
-import Button from "../Atoms/Button";
+import Button from "../../Atoms/Button";
 // import { BsWhatsapp } from "react-icons/bs";
 import { Link } from "react-router-dom";
 
-export default function OprecHead() {
+export default function OprecHeadMobile() {
   return (
     <div className=" mx-auto border border-black flex flex-col gap-2 w-full">
       <h1 className="text-[35px] leading-10 font-mont w-max mx-auto font-extrabold text-white text-center drop-shadow-[0_4px_3px_rgba(85,183,255,1)]">

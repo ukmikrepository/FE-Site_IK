@@ -3,17 +3,17 @@ import CardSimple from '../../Molecules/CardSimple'
 
 export default function WorkProgram() {
   return (
-    <div className="w-full h-full relative py-24 mt-12 mb-24" style={{ backgroundImage: "url('img/OurProgram_BG.png')" }}>
+    <div className="w-full h-full relative py-12" style={{ backgroundImage: "url('img/OurProgram_BG.png')" }}>
       {/* <img src="img/OurProgram_BG.png" alt="" className="2xl:h-fit w-full absolute -z-50"/> */}
 
       <div className="container mx-auto">
         <div className="w-max mx-auto text-center">
-          <h1 className="font-mont font-semibold text-primary-4 text-[52px] leading-[62px] drop-shadow-[0_2px_2px_rgba(8,4,174,1)]">Our Work <br className="xs:inline md:hidden"/> Program</h1>
-          <p className="font-poppins text-[30px] leading-[45px]">February 2023</p>
+          <h1 className="font-mont font-semibold text-primary-4  text-[35px] leading-10 drop-shadow-[0_2px_2px_rgba(8,4,174,1)]">Our Work <br className="xs:inline md:hidden"/> Program</h1>
+          <p className="font-poppins text-[20px] leading-[45px]">February 2023</p>
         </div>
       </div>
 
-      <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 justify-between mt-16 2xl:mt-28 gap-y-8 xl:gap-y-10 gap-x-8 xl:gap-x-10">
+      <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 justify-between mt-12 2xl:mt-28 gap-y-8 xl:gap-y-10 gap-x-8 xl:gap-x-10">
       {[
           {
             id: "workProgram1",
@@ -92,15 +92,15 @@ export default function WorkProgram() {
             cardContent.disabled
               ? "bg-grey-9" // Ubah warna latar belakang untuk kartu "Coming Soon"
               : "bg-white"
-          } gap-4 shadow-[0px_4px_1px_rgba(205,205,205,1)] backdrop-blur-md md:shadow-[0px_6px_1px_rgba(205,205,205,1)] hover:shadow-lg transition-transform transform hover:scale-105 ease-in-out duration-300`} // Tambahkan efek hover dan perubahan ukuran saat mengarahkan kursor ke kartu
+          } gap-4 shadow-[0px_4px_1px_rgba(205,205,205,1)] backdrop-blur-md md:shadow-[0px_6px_1px_rgba(205,205,205,1)] hover:shadow-lg transition-transform transform hover:scale-105 ease-in-out duration-300 px-5 py-6`} // Tambahkan efek hover dan perubahan ukuran saat mengarahkan kursor ke kartu
         >
           <div className="flex flex-col gap-3">
             <div className="flex flex-row justify-between">
               <div className="flex flex-row gap-4">
-                  <img src="/img/logo_ukmik.png" className='w-14' alt="" />
+                  <img src="/img/logo_ukmik.png" className="w-14" alt="Logo_UKMIK" />
                   <div className="flex flex-col gap-2 ">
-                    <h2 className="font-poppins text-xl  leading-[30px] text-grey-1">{`${cardContent.disabled ? "Coming Soon" : cardContent.heading}`}</h2>
-                    <p className="font-poppins font-light text-xs  leading-[18px]">{`${cardContent.division}`}</p>
+                    <h2 className="font-poppins text-lg  leading-[30px] text-grey-1">{`${cardContent.disabled ? "Coming Soon" : cardContent.heading}`}</h2>
+                    <p className="font-poppins font-light text-xs leading-[18px]">{`${cardContent.division}`}</p>
                   </div>
               </div>
               <img src="img/Options_1.png" alt="" className="h-max pt-[1px] "/>
@@ -109,8 +109,8 @@ export default function WorkProgram() {
           </div>
 
 
-          <div className="w-[312px] 2xl:w-[450px] 2xl:gap-60">
-            <p className="font-poppins font-light text-[10px] 2xl:text-xs  leading-[15px]">{`${cardContent.disabled ? "Proker ini akan direncanakan segera. ditunggu yaa!" : cardContent.describ}`}</p>
+          <div className="w-[312px] ">
+            <p className="font-poppins font-light text-[14px] leading-[21px] ">{`${cardContent.disabled ? "Proker ini akan direncanakan segera. ditunggu yaa!" : cardContent.describ}`}</p>
           </div>
 
           <div className="flex flex-row justify-between mt-4">

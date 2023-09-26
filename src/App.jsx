@@ -7,6 +7,7 @@ import Home from "./Pages/Home";
 // import Standard from "./Component/Layout/Standard";
 import Oprec from "./Pages/Oprec";
 import UnderConstruction from "./Pages/UnderConstruction";
+import Quiz from "./Pages/Quiz";
 
 function App({ user }) {
   return (
@@ -16,6 +17,7 @@ function App({ user }) {
         <Route path="/recruitment" element={<Oprec />} />
         <Route path="/profile" element={<UnderConstruction />} />
         <Route path="/blog" element={<UnderConstruction />} />
+        <Route path="/quiz" element={<Quiz />} />
         <Route path="/login" element={<UnderConstruction />} />
         <Route path="*" element={<UnderConstruction />} />
       </Routes>

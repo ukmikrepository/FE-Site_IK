@@ -17,7 +17,7 @@ function App({ user }) {
         <Route path="/recruitment" element={<Oprec />} />
         <Route path="/profile" element={<UnderConstruction />} />
         <Route path="/blog" element={<UnderConstruction />} />
-        <Route path="/quiz" element={<Quiz />} />
+        <Route path="/quiz/*" element={<Quiz />} />
         <Route path="/login" element={<UnderConstruction />} />
         <Route path="*" element={<UnderConstruction />} />
       </Routes>

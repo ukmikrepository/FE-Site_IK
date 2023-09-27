@@ -1,12 +1,15 @@
 import React, { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import styled from 'styled-components';
 
-const QuizQuestion = () => {
+const QuizQuestion = ({setResult}) => {
   const [questions, setQuestions] = useState([]);
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [finalAnswers, setAnswers] = useState([]);
   const [showSubmit, setShowSubmit] = useState(false);
   const [progress, setProgress] = useState(0);
+
+  const navigate = useNavigate();
 
   const fetchData = async () => {
     try {
@@ -57,15 +60,17 @@ const QuizQuestion = () => {
     
       const response = await fetch("http://localhost:3001/users", options);
       if (!response.ok) throw Error(response.statusText);
-      console.log(await response.json());
+      const data = await response.json(); 
+      setResult(data);
+      navigate('result');
   };
 
   return (
-    <div className="container mx-auto p-4">
-      <h1 className="text-2xl font-semibold mb-4">Tes MBTI</h1>
+    <div className="container mx-auto p-4 min-h-screen flex flex-col items-center justify-center">
+      <h1 className="text-2xl font-semibold mb-4">Cek Kepribadianmu!!</h1>
       {questions.length > 0 ? (
         <ProgressBarWrapper>
-          <div className="progress-bar">
+          <div className="progress-bar w-[100vh]">
             <div
               className="progress"
               style={{
@@ -73,8 +78,8 @@ const QuizQuestion = () => {
               }}
             ></div>
           </div>
-          <div className="w-full text-center">
-            Pertanyaan ke <span className="text-gray-400">
+          <div className="w-full text-center mt-2">
+            Pertanyaan ke <span className="text-primary-1 font-bold">
             {currentQuestion}/{questions.length}
             </span>
           </div>
@@ -82,7 +87,7 @@ const QuizQuestion = () => {
       ) : null}
       {questions.length > 0 && currentQuestion < questions.length ? (
         <>
-          <p>{questions[currentQuestion]?.text}</p>
+          <p className='text-xl my-8'>{questions[currentQuestion]?.text}</p>
           <div className="grid grid-cols-7 gap-2 mt-4">
             {[
               "Sangat Tidak Setuju",
@@ -110,7 +115,7 @@ const QuizQuestion = () => {
           </div>
           </>
       ) : <>
-        <h1>Selesai</h1>
+        <h1 className='font-mont font-bold'>Yeyy!! Kamu sudah mengisi semua Quiz. Submit Jawabanmu!!</h1>
       </>}
       {showSubmit ? (
         <button

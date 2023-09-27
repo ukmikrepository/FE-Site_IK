@@ -6,7 +6,7 @@ export default class RSuggestions extends React.Component {
     return (
         <div> {
           suggestions
-            &&  <p className='mt-3'>You may also consider the following type(s):
+            &&  <p className='mt-3'>Kamu juga bisa mempertimbangkan tipe berikut ini :
                 <b> { suggestions.join(', ') }</b></p>
         } </div>
     );

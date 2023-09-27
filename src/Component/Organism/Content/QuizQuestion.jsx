@@ -4,7 +4,7 @@ import styled from 'styled-components';
 const QuizQuestion = () => {
   const [questions, setQuestions] = useState([]);
   const [currentQuestion, setCurrentQuestion] = useState(0);
-  const [answers, setAnswers] = useState([]);
+  const [finalAnswers, setAnswers] = useState([]);
   const [showSubmit, setShowSubmit] = useState(false);
   const [progress, setProgress] = useState(0);
 
@@ -27,18 +27,37 @@ const QuizQuestion = () => {
   }, []);
 
   const handleAnswer = (answer, id) => {
-    const hasAnswer = answers.some(item => item.includes(`${id}_`));
+    const hasAnswer = finalAnswers.some(item => item.includes(`${id}_`));
     if(hasAnswer){
-      setAnswers([...answers.filter(answer => answer.split('_')[0] !== id.toString()), answer]);
+      setAnswers([...finalAnswers.filter(answer => answer.split('_')[0] !== id.toString()), answer]);
     }else{
-      setAnswers([...answers, answer]);
+      setAnswers([...finalAnswers, answer]);
     }
   };
 
-  const handleSubmit = () => {
+  const handleSubmit = async() => {
     // Lakukan sesuatu dengan hasil tes saat tombol "Submit" diklik
     // Misalnya, hitung tipe MBTI berdasarkan jawaban
     console.log('Hasil MBTI:');
+    let answers = [];
+    finalAnswers.map(answer => {
+      let ans = answer.split('_');
+      answers.push({ questionId: Number(ans[0]), answer: Number(ans[1]) });
+    })
+
+
+    const name = "Dian Setiawan";
+      const options = {
+        body: JSON.stringify({ answers, name }),
+        method: 'POST',
+        headers: {
+          "Content-Type": "application/json"
+        },
+      };
+    
+      const response = await fetch("http://localhost:3001/users", options);
+      if (!response.ok) throw Error(response.statusText);
+      console.log(await response.json());
   };
 
   return (
@@ -77,7 +96,7 @@ const QuizQuestion = () => {
               <button
                 key={index}
                 className={`px-4 py-2 rounded-lg border ${
-                  answers[currentQuestion] === `${questions[currentQuestion]?.id}_${index + 1}`
+                  finalAnswers[currentQuestion] === `${questions[currentQuestion]?.id}_${index + 1}`
                     ? 'bg-blue-500 text-black'
                     : 'bg-white'
                 }`}
@@ -108,6 +127,7 @@ const QuizQuestion = () => {
             setProgress(progress + 1)
             if (currentQuestion + 1 === questions.length) {
               setShowSubmit(true);
+              console.log(finalAnswers);
             }
           }}
         >

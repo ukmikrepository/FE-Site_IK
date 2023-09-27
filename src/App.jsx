@@ -8,6 +8,7 @@ import Home from "./Pages/Home";
 import Oprec from "./Pages/Oprec";
 import UnderConstruction from "./Pages/UnderConstruction";
 import Profile from "./Pages/Profile";
+import Quiz from "./Pages/Quiz";
 
 function App({ user }) {
   return (
@@ -17,6 +18,7 @@ function App({ user }) {
         <Route path="/recruitment" element={<Oprec />} />
         <Route path="/profile" element={<Profile />} />
         <Route path="/blog" element={<UnderConstruction />} />
+        <Route path="/quiz/*" element={<Quiz />} />
         <Route path="/login" element={<UnderConstruction />} />
         <Route path="*" element={<UnderConstruction />} />
       </Routes>

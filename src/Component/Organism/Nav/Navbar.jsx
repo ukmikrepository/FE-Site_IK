@@ -34,7 +34,7 @@ export default function Navbar() {
         scrolled ? "backdrop-blur-sm bg-[rgba(0,0,0,0.10)]" : "bg-transparent"
       }`}
     >
-      <img src="img/logo_ukmik.png" alt="" className="w-[50px] h-[50px]" />
+      <img src="/img/logo_ukmik.png" alt="" className="w-[50px] h-[50px]" />
       <div className="relative">
         <Button
           anotherClass={`transition-all block md:hidden transform duration-1000 ease-in-out`}
